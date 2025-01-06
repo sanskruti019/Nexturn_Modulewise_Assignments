@@ -1,0 +1,115 @@
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1e1e2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.todo-app {
+    background: #2c2c3a;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4), -10px -10px 20px rgba(60, 60, 70, 0.7);
+    padding: 30px;
+    width: 380px;
+    max-width: 90%;
+}
+
+h1 {
+    text-align: center;
+    color: #e6e6ff;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskName {
+    flex: 1;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background: #3a3a4b;
+    box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.4), inset -6px -6px 12px rgba(60, 60, 70, 0.7);
+    color: #e6e6ff;
+    font-size: 14px;
+}
+
+#taskName::placeholder {
+    color: #8a8aa6;
+}
+
+button {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #4a4a5c, #3a3a4b);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4), -6px -6px 12px rgba(60, 60, 70, 0.7);
+    color: #e6e6ff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4), -8px -8px 16px rgba(60, 60, 70, 0.7);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background: #3a3a4b;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4), -6px -6px 12px rgba(60, 60, 70, 0.7);
+    color: #e6e6ff;
+    transition: all 0.2s ease-in-out;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #8a8aa6;
+    background: #444455;
+}
+
+li span {
+    flex: 1;
+    font-size: 14px;
+}
+
+li button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    background: #4a4a5c;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4), -4px -4px 8px rgba(60, 60, 70, 0.7);
+    color: #e6e6ff;
+}
+
+li button:hover {
+    background: linear-gradient(145deg, #3a3a4b, #4a4a5c);
+}
+
+#taskCounter {
+    text-align: center;
+    font-size: 14px;
+    color: #8a8aa6;
+    margin-top: 20px;
+}

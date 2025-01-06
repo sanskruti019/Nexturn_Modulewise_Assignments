@@ -1,0 +1,160 @@
+:root {
+    --primary-color: #2563eb; /* Blue */
+    --primary-color-hover: #1e50c1;
+    --background-color: #1e1e2f; /* Dark grey */
+    --card-background: #2c2c3a; /* Grey for cards */
+    --border-color: #374151; /* Darker grey */
+    --text-color: #e6e6ff; /* Light blue-grey for text */
+    --text-secondary-color: #8a8aa6; /* Muted grey-blue */
+    --shadow-color: rgba(0, 0, 0, 0.3); /* Subtle black shadow */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 1.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.expense-form {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    border: 1px solid var(--border-color);
+    margin-bottom: 2.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary-color);
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: #1e1e2f;
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.4);
+    outline: none;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--primary-color-hover);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.expenses-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--card-background);
+    margin-bottom: 2.5rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.expenses-table th,
+.expenses-table td {
+    padding: 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1rem;
+    color: var(--text-secondary-color);
+}
+
+.expenses-table th {
+    background-color: #3a3a4b;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.category-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.delete-btn {
+    background-color: #ef4444;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #dc2626;
+}
+
+.summary-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.chart-container {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+    .expenses-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
